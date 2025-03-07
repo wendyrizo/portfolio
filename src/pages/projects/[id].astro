@@ -1,0 +1,28 @@
+---
+import Project from "../../layouts/Project.astro";
+
+const projects = {
+  "tterm": {
+    title: "tterm",
+    description: "Organizador de tareas CLI",
+    content: "Detalles del proyecto, tecnologías usadas, retos y aprendizajes...",
+  },
+  "otro-proyecto": {
+    title: "Otro Proyecto",
+    description: "Descripción del segundo proyecto.",
+    content: "Más detalles del segundo proyecto...",
+  }
+};
+
+
+const { id } = Astro.params;
+const project = projects[id];
+
+if (!project) {
+  throw new Error("Proyecto no encontrado");
+}
+---
+
+<Project title={project.title} description={project.description}>
+  <p>{project.content}</p>
+</Project>

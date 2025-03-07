@@ -1,15 +1,19 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="About">
-	<main>
-		<section id="about">
-			<h2 class="text-5xl text-center md:text-7xl">About</h2>
-			<p class="p-5">
-				Egresada de Desarrollo de Software. Actualmente en proceso de convertirme en ingeniera.
-			</p>
-		</section>
-	</main>
+  <section class="flex justify-center items-center">
+    <div
+      class="w-[80%] max-w-3xl text-neutral-500 font-[380] mt-[100px] lg:mt-[180px]"
+    >
+      <div>
+        <h2 class="text-neutral-900 pb-6">Abo<span class="italic">ut</span></h2>
+        <p class="leading-[25px] pb-4 text-neutral-600">
+          So... do you wanna know more about me
+        </p>
+        <p class="leading-[25px] pb-4 text-neutral-600 w-11/12">I don't know</p>
+      </div>
+    </div>
+  </section>
 </Layout>
-
