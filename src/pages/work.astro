@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+const projects = [
+  {
+    id: "tterm",
+    name: "tterm",
+    description: "A command-line task organizer built with Python.",
+  },
+  {
+    id: "otro-proyecto",
+    name: "Otro Proyecto",
+    description: "Another project description here.",
+  },
+];
+---
+
+<Layout title="Work">
+  <section class="flex justify-center items-center">
+    <div
+      class="w-[80%] max-w-3xl text-neutral-600 font-[380] mt-[100px] lg:mt-[180px]"
+    >
+      <div>
+        <h2 class="text-neutral-900 pb-6 text-xl">
+          Wo<span class="italic">rk</span>
+        </h2>
+      </div>
+    </div>
+  </section>
+</Layout>
