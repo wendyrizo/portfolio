@@ -1,0 +1,47 @@
+---
+import Link from "./Link.astro";
+import Mail from "../icons/Mail.astro";
+import Download from "../icons/Download.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+---
+
+<section class="mb-5 mt-5">
+  <header class="flex items-center gap-4">
+    <img src="/profile.webp" alt="profile-pic" class="size-20 rounded-full" />
+    <div>
+      <h1 class="text-xl font-bold">Wendy Rizo</h1>
+      <div class="flex gap-4 mt-2">
+        <div>
+          <a href="#projects">
+            <span class="font-bold text-white">3</span>
+            <p class="text-sm text-gray-400">completed projects</p>
+          </a>
+        </div>
+        <div>
+          <a href="#">
+            <span class="font-bold text-white">1</span>
+            <p class="text-sm text-gray-400">year of experience</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <article class="mt-4">
+    <p>
+      As a <strong class="text-blue-300">Software Developer</strong>, I build
+      practical tools that solve real problems, focusing on thoughtful design
+      and long-term value.
+    </p>
+    <nav class="flex flex-wrap gap-4 mt-4 text-white font-semibold">
+      <Link href="mailto:wendymartinezrizo@gmail.com">
+        <Mail />Contact
+      </Link>
+      <Link href="https://www.linkedin.com/in/wendyrizo/">
+        <LinkedIn />LinkedIn Profile
+      </Link>
+      <Link href="/resume.pdf">
+        <Download />Resume
+      </Link>
+    </nav>
+  </article>
+</section>

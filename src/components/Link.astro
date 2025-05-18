@@ -1,0 +1,13 @@
+---
+const { href } = Astro.props;
+---
+
+<a
+  {...Astro.props}
+  href={href}
+  target="_blank"
+  role="link"
+  class="flex gap-1 items-center"
+>
+  <slot />
+</a>

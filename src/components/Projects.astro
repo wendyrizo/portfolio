@@ -1,0 +1,42 @@
+---
+import { projects } from "../data/projects";
+import GitHub from "../icons/GitHub.astro";
+import Link from "./Link.astro";
+import Pill from "./Pill.astro";
+---
+
+<h1 id="projects" class="text-xl font-bold">Projects</h1>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+  {
+    projects.map((project) => (
+      <article class="w-full max-w-sm overflow-hidden rounded-xl p-4 space-y-3 shadow-sm bg-[#1E1E2E] border border-transparent">
+        <img
+          src={project.image}
+          alt={`Image of ${project.title}`}
+          class="w-full h-auto object-cover rounded-lg"
+        />
+        <div class="flex items-center justify-between">
+          <h2 class="text-lg font-bold">{project.title}</h2>
+          <Link
+            href={project.repo}
+            class="flex items-center gap-1 bg-gray-700/50 px-2 py-1 rounded-lg text-sm hover:bg-gray-700 transition"
+          >
+            <GitHub class="size-4" /> Repo
+          </Link>
+        </div>
+        <p class="text-sm">{project.decription}</p>
+        <div class="flex flex-wrap gap-2">
+          {project.technologies.map((tech) => (
+            <Pill>{tech}</Pill>
+          ))}
+        </div>
+        <Link
+          href={project.preview}
+          class="block w-full text-center bg-gray-700/50 py-2 rounded-lg font-semibold hover:bg-gray-700 transition"
+        >
+          Preview
+        </Link>
+      </article>
+    ))
+  }
+</section>
