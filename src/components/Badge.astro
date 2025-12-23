@@ -1,0 +1,12 @@
+---
+const { class: className } = Astro.props;
+---
+
+<span
+  class:list={[
+    "inline-flex items-center text-xs px-2 py-0.5 rounded",
+    className,
+  ]}
+>
+  <slot />
+</span>
