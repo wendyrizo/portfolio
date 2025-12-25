@@ -1,0 +1,17 @@
+---
+import { projects } from "../data/projects";
+import ProjectCard from "./ProjectCard.astro";
+---
+
+<section class="mt-16">
+  <h2 class="font-bold text-xl mb-6">Projects I've Worked On</h2>
+  <ul class="grid gap-4 items-stretch" role="list">
+    {
+      projects.map((project) => (
+        <li role="listitem">
+          <ProjectCard project={project} />
+        </li>
+      ))
+    }
+  </ul>
+</section>
