@@ -1,13 +1,15 @@
 ---
-const { href } = Astro.props;
+const { href, class: className } = Astro.props;
 ---
 
 <a
   href={href}
   target="_blank"
   rel="noopener noreferrer"
-  class="bg-[#5b7c99]
-    px-5 py-2
+  class:list={[
+    `
+    bg-[#5b7c99]
+    px-3 py-1
     font-bold
     uppercase
     tracking-widest
@@ -20,8 +22,10 @@ const { href } = Astro.props;
     active:translate-y-1
     active:shadow-none
     transition-all
-    duration-100"
-  }
+    duration-100
+    `,
+    className,
+  ]}
 >
   <slot />
 </a>
