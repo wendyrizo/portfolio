@@ -1,0 +1,43 @@
+---
+import LinkButton from "./LinkButton.astro";
+---
+
+<section class="border-4 border-black shadow-[6px_6px_0_0_#000] p-6">
+  <header class="flex flex-wrap gap-6 items-center">
+    <div
+      class="size-24 flex items-center justify-center aspect-square border-4 border-black
+    font-mono font-bold text-4xl bg-[#f5f1c6] text-[#7c6a2e] select-none"
+    >
+      W
+    </div>
+
+    <div class="space-y-1 [&_span]:font-mono [&_span]:font-bold">
+      <h1 class="text-lg">
+        <span>NAME:</span> Wendy Rizo
+      </h1>
+      <h2>
+        <span>ROLE:</span> Software Developer
+      </h2>
+      <p>
+        <span>LOCATION:</span> Mexico
+      </p>
+    </div>
+  </header>
+
+  <blockquote class="my-6 p-4 border-2 border-black shadow-[4px_4px_0_0_#000]">
+    <p class="font-medium leading-relaxed text-sm font-mono">
+      I build tools and experimental projects with an interest in systems, data
+      analysis, and low-level concepts.
+    </p>
+  </blockquote>
+
+  <nav class="flex flex-wrap gap-4">
+    <LinkButton href="mailto:wendymartinezrizo+hello@gmail.com">
+      Contact
+    </LinkButton>
+    <LinkButton href="https://www.linkedin.com/in/wendyrizo/">
+      LinkedIn
+    </LinkButton>
+    <LinkButton href="https://github.com/wendyrizo"> GitHub </LinkButton>
+  </nav>
+</section>
