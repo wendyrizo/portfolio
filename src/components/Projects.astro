@@ -1,0 +1,12 @@
+---
+import { projects } from "../data/projects";
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<section class="mt-12">
+  <h2 class="font-ui mb-4 tracking-widest">AVAILABLE QUESTS</h2>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    {projects.map((project) => <ProjectCard project={project} />)}
+  </div>
+</section>

@@ -1,0 +1,36 @@
+---
+import LinkButton from "./LinkButton.astro";
+import type { Project } from "../data/projects";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<article
+  class="bg-slate-50/50 border-4 border-black shadow-[4px_4px_0_0_#000] p-4 space-y-3"
+>
+  <header>
+    <h3 class="font-ui border-b-2 border-black pb-1 text-blue-900">
+      {project.title}
+    </h3>
+  </header>
+
+  <p class="leading-relaxed">
+    {project.description}
+  </p>
+
+  <ul class="space-y-1 text-sm">
+    <li>
+      <span class="font-bold">REQUIRES:</span>{" "}
+      {project.stack.join(", ")}
+    </li>
+  </ul>
+
+  <nav class="flex gap-4 pt-2">
+    {project.link && <LinkButton href={project.link}>View</LinkButton>}
+    {project.repo && <LinkButton href={project.repo}>Code</LinkButton>}
+  </nav>
+</article>
