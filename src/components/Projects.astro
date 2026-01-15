@@ -3,8 +3,17 @@ import { projects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard.astro";
 ---
 
-<section class="mt-12">
-  <h2 class="font-ui mb-4 tracking-widest">AVAILABLE QUESTS</h2>
+<section
+  class="mt-12 bg-slate-50/50 border-4 border-black shadow-[6px_6px_0_0_#000] p-6"
+>
+  <header class="mb-4">
+    <h2 class="font-ui text-lg border-b-2 border-black pb-1">
+      AVAILABLE QUESTS
+    </h2>
+    <p class="font-ui text-xs mt-4">
+      QUESTS FOUND: {projects.length}
+    </p>
+  </header>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
     {projects.map((project) => <ProjectCard project={project} />)}
